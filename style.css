@@ -1,0 +1,388 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    width: 442px;
+    height: 581px;
+    align-items: center;
+    gap: 12px;
+    
+}
+
+.header{
+    width: 153px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FF6B82;
+    font-family: Inter;
+    font-size: 21.08px;
+    font-weight: 700;
+    line-height: 25.51px;
+    text-align: center;
+
+
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 12px 12px 12px 12px;
+    overflow: hidden;
+    cursor: pointer;
+    width:345px;
+    transition: box-shadow 0.3s ease, max-height 0.3s ease;
+    max-height: 74px; /* Show only header initially */
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0px 0px 4px 0px #A7A7A740;
+
+}
+.card.expanded {
+    max-height: 300px; /* Adjust as needed to fit content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #FF6B82;
+    background: #FFF9FA;
+}
+
+.card.expanded .card-header .header-right {
+    background: #FFF9FA; /* Keeps header-middle (header-right) background white */
+}
+
+
+.card.expanded .card-content{
+    background: #FFF9FA; /* Apply background #FFF9FA to all except header-middle */
+}
+
+.card.expanded .header-left{
+    border-radius: 12px 0px 12px 0px; /* Apply background #FFF9FA to all except header-middle */
+}
+
+
+.card-header {
+    display: flex;
+}
+
+.header-left {
+    width: 74px;
+    height: 74px;
+    border-radius: 12px 0px 0px 12px;
+    border: 0.9px 0px 0.9px 0.9px;
+    opacity: 0px;
+    background: #FF6B82;
+
+}
+.header-middle {
+    /* width: 14.46px;
+    height: 14.46px;
+    background-color: red;
+    border-radius: 50%; */
+    margin: 29px 0px 0px 9px;
+
+}
+.card-radio {
+    display: none; /* Hide the default radio button */
+}
+
+.card-radio + label {
+    position: relative;
+    padding-left: 30px; /* Space for custom radio button */
+    cursor: pointer;
+    width: 14.46px;
+    height: 14.46px;
+}
+
+.card-radio + label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14.46px;
+    height: 14.46px;
+    border-radius: 50%;
+    background: #FFF; /* Default background */
+    border: 2px solid #FF6B82; /* Red border */
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.card-radio:checked + label::before {
+    background: white; /* Red background when checked */
+    border-color: #FF6B82; /* Red border when checked */
+}
+
+.card-radio:checked + label::after {
+    content: '';
+    position: absolute;
+    left: 5px; /* Centered within the radio button */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #FF6B82; /* White dot inside the red circle */
+}
+
+.header-right {
+    padding: 18px;
+    background: #fff;
+    color: #000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+
+    div{
+        display: flex;
+        gap:12px;
+    }
+}
+
+.header-last{
+    width: 90px;
+    height: 17px;
+    margin: 25px 17px 0px 9px;
+}
+
+.popular{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.94px;
+    text-align: left;
+    color: #FF6B82;
+    
+}
+
+.discount_layout{
+    width: 35px;
+    height: 38px;
+    padding: 16px 18px;
+    text-align: center;
+
+}
+
+.discount {
+    color: white;
+    border-radius: 50%;
+        font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20.16px;
+    text-align: center;
+
+}
+
+.offer {
+    font-family: Inter;
+    font-size: 14.46px;
+    font-weight: 400;
+    line-height: 17.5px;
+    text-align: left;
+
+}
+.offer-percent{
+    width: 44px;
+height: 15px;
+gap: 0px;
+opacity: 0px;
+color:white;
+background: #FF6B82;
+font-family: Inter;
+font-size: 12px;
+font-weight: 400;
+line-height: 14.52px;
+text-align: center;
+}
+.price{
+    font-family: Inter;
+font-size: 9.94px;
+font-weight: 400;
+line-height: 12.03px;
+text-align: left;
+margin: 4px 0px 0px -5px;
+text-decoration: line-through;
+    opacity: 40%;
+
+}
+.offer-price {
+    font-family: Inter;
+    font-size: 14.46px;
+    font-weight: 600;
+    line-height: 17.5px;
+    text-align: left;
+    
+
+}
+
+/* .card-header {
+    background: #007bff;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+} */
+
+.card-content {
+    padding: 10px;
+    background: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.form{
+    display: flex;
+    gap:18px;
+    margin-top: 12px;
+}
+.form-row{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    select {
+        width: 72.3px;
+        height: 25.31px;
+        gap: 0px;
+        border-radius: 1.81px 0px 0px 0px;
+        opacity: 0px;
+        border: 0.9px solid #D9D9D9;
+        font-family: Inter;
+        font-size: 10.85px;
+        font-weight: 400;
+        line-height: 13.13px;
+        text-align: left;
+ 
+    }
+    
+    label{
+            font-family: Inter;
+            font-size: 9.94px;
+            font-weight: 400;
+            line-height: 12.03px;
+            text-align: left;
+
+    }
+}
+.form-row-no{
+   padding-top: 28px;
+   font-family: Inter;
+font-size: 9.04px;
+font-weight: 400;
+line-height: 10.94px;
+text-align: left;
+
+}
+
+.card.expanded {
+    max-height: 300px; /* Adjust as needed to fit content */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.card.expanded .card-content {
+    display: block;
+}
+
+.footer{
+    display: flex;
+    width:345px;
+    margin-top: 3px;
+
+    span{
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.94px;
+        flex:1;
+    }
+}
+
+.footer-left{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: left;
+    color: #FF6B82;
+}
+.footer-right{
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: right;
+}
+
+.footer-button{
+    background: #FF6B82;
+    width: 345px;
+    height: 40px;
+    border-radius: 4px;
+    opacity: 0px;
+    display: flex;
+    align-items: center;
+    gap:12px;
+    div{
+        flex:1;
+    }
+}
+
+.footer-button .text{
+    width: 68px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    span{
+        font-family: Inter;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 14.52px;
+        text-align: left;  
+        color: #FFFFFF;      
+    }
+
+}
+
+.footer-button .icon{
+    width: 68px;
+    height: 15px;
+    text-align: right;
+
+}
+
+.footer-text{
+    width: 135px;
+    height: 17px;
+    top: 536px;
+    left: 153px;
+    gap: 0px;
+    opacity: 0px;
+
+    span{
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.94px;
+        text-align: left;
+    }
+    span:first-child{
+        color: #3E3E3E;
+        opacity: 0.2;
+    }
+    span:last-child{
+        color: red;
+        font-weight: 600;
+    }
+}
+

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expandable Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card-container">
+        <div class="header">YAY! It’s BOGO</div>
+        <div class="card" onclick="toggleExpand(this)">
+            <div class="card-header">
+                <div class="header-left">
+                    <div class="discount_layout">
+                    <span class="discount">30% OFF</span>
+                    </div>
+                
+                </div>
+                <div class="header-middle">
+                    <input type="radio" name="card-select" id="card1" class="card-radio">
+                    <label for="card1" class="card-header">
+                </div>
+                <div class="header-right">
+                    <span class="offer">Buy 1 Get 2</span>
+                    <span class="offer-price">$18.00 USD</span>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="form">
+                    <div class="form-row-no">#1</div>
+                <div class="form-row">
+                    <label for="size" class="label">Size</label>
+                    <select id="size" name="size">
+                        <option value="small" selected>S</option>
+                        <option value="medium">M</option>
+                        <option value="large">L</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="color">Color:</label>
+                    <select id="color" name="color">
+                        <option value="color">Color</option>
+                        <option value="Black" selected>Black</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                </div>
+                </div>
+                <div class="form">
+                    <div class="form-row-no">#1</div>
+                    <div class="form-row">
+                        <label for="size">Size</label>
+                        <select id="size" name="size">
+                            <option value="small" selected>S</option>
+                            <option value="medium">M</option>
+                            <option value="large">L</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="color">Color</label>
+                        <select id="color" name="color">
+                            <option value="color" selected>Color</option>
+                            <option value="black">Black</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" onclick="toggleExpand(this)">
+            <div class="card-header">
+                <div class="header-left">
+                    <div class="discount_layout">
+                    <span class="discount">30% OFF</span>
+                    </div>
+                
+                </div>
+                <div class="header-middle">
+                    <input type="radio" name="card-select" id="card1" class="card-radio">
+                    <label for="card1" class="card-header">
+                </div>
+                <div class="header-right">
+                    <span class="offer">Buy 2 get 4</span>
+                    <span class="offer-price">$24.00 USD</span>
+                </div>
+                <div class="header-last">
+                    <span class="popular">Most Popular</span>
+                </div>
+            </div>
+            <div class="card-content">
+                <div class="form">
+                    <div class="form-row-no">#1</div>
+                <div class="form-row">
+                    <label for="size" class="label">Size</label>
+                    <select id="size" name="size">
+                        <option value="small" selected>S</option>
+                        <option value="medium">M</option>
+                        <option value="large">L</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="color">Color</label>
+                    <select id="color" name="color">
+                        <option value="color">Color</option>
+                        <option value="Black" selected>Black</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                </div>
+                </div>
+                <div class="form">
+                    <div class="form-row-no">#1</div>
+                    <div class="form-row">
+                        <label for="size">Size</label>
+                        <select id="size" name="size">
+                            <option value="small" selected>S</option>
+                        <option value="medium">M</option>
+                        <option value="large">L</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="color">Color</label>
+                        <select id="color" name="color">
+                            <option value="color" selected>Color</option>
+                            <option value="Black">Black</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" onclick="toggleExpand(this)">
+            <div class="card-header">
+                <div class="header-middle">
+                    <input type="radio" name="card-select" id="card1" class="card-radio">
+                    <label for="card1" class="card-header">
+                 </div>
+                <div class="header-right">
+                    <div>
+                        <span class="offer">Buy 3 get 6 </span>
+                        <span class="offer-percent">10%OFF</span>
+                    </div>
+                    <div>
+                        <span class="offer-price">$36.00 USD</span>
+                         <span class="price">$10.00 USD</span>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="card-content">
+                <div class="form">
+                    <div class="form-row-no">#1</div>
+                <div class="form-row">
+                    <label for="size" class="label">Size</label>
+                    <select id="size" name="size">
+                        <option value="small" selected>S</option>
+                        <option value="medium">M</option>
+                        <option value="large">L</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label for="color">Color</label>
+                    <select id="color" name="color">
+                        <option value="color">Color</option>
+                        <option value="black" selected>Black</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                </div>
+                </div>
+                <div class="form">
+                    <div class="form-row-no">#1</div>
+                    <div class="form-row">
+                        <label for="size">Size</label>
+                        <select id="size" name="size">
+                            <option value="small" selected>S</option>
+                            <option value="medium">M</option>
+                            <option value="large">L</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <label for="color">Color</label>
+                        <select id="color" name="color">
+                            <option value="color" selected>Color</option>
+                            <option value="black">Black</option>
+                            <option value="blue">Blue</option>
+                            <option value="green">Green</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <span class="footer-left">Free Delivery</span>
+            <span class="footer-right">Total : $18.00 USD</span>
+        </div>
+        <div class="footer-button">
+            <div class="icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 3.33333V12.6667M3.33333 8H12.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                
+            </div>
+            <div class="text"><span>Add to Cart</span></div>
+        </div>
+        <div class="footer-text">
+            <span>Powered by </span><span>Pumper</span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
