@@ -43,29 +43,28 @@ body {
     cursor: pointer;
     width:345px;
     transition: box-shadow 0.3s ease, max-height 0.3s ease;
-    max-height: 74px; /* Show only header initially */
-    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    max-height: 74px; 
     box-shadow: 0px 0px 4px 0px #A7A7A740;
 
 }
 .card.expanded {
-    max-height: 300px; /* Adjust as needed to fit content */
+    max-height: 300px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     border: 1px solid #FF6B82;
     background: #FFF9FA;
 }
 
 .card.expanded .card-header .header-right {
-    background: #FFF9FA; /* Keeps header-middle (header-right) background white */
+    background: #FFF9FA; 
 }
 
 
 .card.expanded .card-content{
-    background: #FFF9FA; /* Apply background #FFF9FA to all except header-middle */
+    background: #FFF9FA; 
 }
 
 .card.expanded .header-left{
-    border-radius: 12px 0px 12px 0px; /* Apply background #FFF9FA to all except header-middle */
+    border-radius: 12px 0px 12px 0px;
 }
 
 
@@ -83,10 +82,6 @@ body {
 
 }
 .header-middle {
-    /* width: 14.46px;
-    height: 14.46px;
-    background-color: red;
-    border-radius: 50%; */
     margin: 29px 0px 0px 9px;
 
 }
@@ -96,7 +91,7 @@ body {
 
 .card-radio + label {
     position: relative;
-    padding-left: 30px; /* Space for custom radio button */
+    padding-left: 30px;
     cursor: pointer;
     width: 14.46px;
     height: 14.46px;
@@ -111,26 +106,26 @@ body {
     width: 14.46px;
     height: 14.46px;
     border-radius: 50%;
-    background: #FFF; /* Default background */
-    border: 2px solid #FF6B82; /* Red border */
+    background: #FFF;
+    border: 2px solid #FF6B82; 
     transition: background 0.3s, border-color 0.3s;
 }
 
 .card-radio:checked + label::before {
-    background: white; /* Red background when checked */
-    border-color: #FF6B82; /* Red border when checked */
+    background: white; 
+    border-color: #FF6B82; 
 }
 
 .card-radio:checked + label::after {
     content: '';
     position: absolute;
-    left: 5px; /* Centered within the radio button */
+    left: 5px; 
     top: 50%;
     transform: translateY(-50%);
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background: #FF6B82; /* White dot inside the red circle */
+    background: #FF6B82; 
 }
 
 .header-right {
@@ -228,12 +223,6 @@ text-decoration: line-through;
 
 }
 
-/* .card-header {
-    background: #007bff;
-    color: #fff;
-    padding: 10px;
-    font-size: 18px;
-} */
 
 .card-content {
     padding: 10px;
@@ -286,7 +275,7 @@ text-align: left;
 }
 
 .card.expanded {
-    max-height: 300px; /* Adjust as needed to fit content */
+    max-height: 300px; 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 

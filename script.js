@@ -21,13 +21,6 @@ function toggleExpand(card, event) {
     card.classList.toggle('expanded');
 }
 
-// const radioButton = card.querySelector('.card-radio');
-//         if (card.classList.contains('expanded')) {
-//             radioButton.checked = true;
-//         } else {
-//             radioButton.checked = false;
-//         }
-
 // Add event listeners to all cards
 document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', function(event) {
